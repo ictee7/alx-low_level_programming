@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/**
+*main - Entry Point
+*
+*Return: Always 0 (Success)
+*/
+
+int main(void)
+{
+	int ch = '0';
+	int cha = 'a';
+
+	while (ch <= '9')
+	{
+		putchar(ch);
+		ch++;
+	}
+	while (cha < 'g')
+	{
+		putchar(cha);
+		cha++;
+	}
+	putchar('\n');
+	return (0);
+}
