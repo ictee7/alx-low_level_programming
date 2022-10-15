@@ -4,7 +4,6 @@
   *
   *Return: Alaways 0 (Success)
   */
-
 int main(void)
 {
 	int i;
@@ -12,8 +11,6 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		j = '0';
-
 		if (i == '0')
 			j = '1';
 		else if (i == '1')
@@ -34,24 +31,15 @@ int main(void)
 			j = '9';
 		else
 			break;
-
 		for (; j <= '9'; j++)
 		{
 			putchar(i);
 			putchar(j);
-
 			if (i == '8')
-			{
 				break;
-			}
-
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
 		}
-
 	}
 	putchar('\n');
 	return (0);
