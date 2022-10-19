@@ -1,12 +1,20 @@
 #include "main.h"
 /**
- *print_to_98 - Entry Point
+ *times_table - Entry Point
  *
  *Return: 0
  */
 
 
-void print_to_98(int n)
+void times_table(void)
 {
-	_putchar('n');
+	int i;
+
+	for (i = 0; i <=10; )
+	{
+		_putchar(i + '0');
+		if (i == 10)
+			break;
+	}
+	
 }
