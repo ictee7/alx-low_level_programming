@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdio.h>
+
+int main(void)
+{
+	int num;
+	int count;
+	int lastPrime;
+
+	for (count = 2; num > 1; count++)
+	{
+		while (count / num == 0)
+		{
+			num = num / count;
+		}
+	}
+}
