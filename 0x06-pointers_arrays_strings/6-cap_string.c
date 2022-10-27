@@ -31,11 +31,11 @@ char *cap_string(char *s)
 				s[i] = s[i] - 32;
 			continue;
 		}
-			else if (s[i] == 40 || s[i] == 41 || s[i] == 123 || s[i] == 125)
+			else if (s[i - 1] == 40 || s[i - 1] == 41 ||
+				 s[i - 1] == 123 || s[i - 1] == 125)
 			{
-				++i;
-				if (s[i] >= 'A' && s[i] <= 'Z')
-					s[i] = s[i] + 32;
+				if (s[i] >= 'a' && s[i] <= 'z')
+					s[i] = s[i] - 32;
 				continue;
 			}
 			else
