@@ -17,17 +17,16 @@ char *cap_string(char *s)
 			continue;
 		}
 
-		else if (s[i] == 32 || s[i] == 33 || s[i] == 9 ||
-			 s[i] == 10 || s[i] == 46)
+		else if (s[i - 1] == 32 || s[i - 1] == 33 || s[i - 1] == 9 ||
+			 s[i - 1] == 10 || s[i - 1] == 46)
 		{
-			++i;
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - 32;
 			continue;
 		}
-			else if (s[i] == 44 || s[i] == 59 || s[i] == 63 || s[i] == 34)
+			else if (s[i - 1] == 44 || s[i - 1] == 59 ||
+				 s[i - 1] == 63 || s[i - 1] == 34)
 		{
-			++i;
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - 32;
 			continue;
