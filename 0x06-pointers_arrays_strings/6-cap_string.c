@@ -10,13 +10,11 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i]  != '\0'; i++)
 	{
-		if (i == 0)
+		if (s[0] >= 'a' && s[i] <= 'z')
 		{
-			if (s[i] >= 'a' && s[i] <= 'z')
-				s[i] = s[i] - 32;
+			s[0] = s[0] - 32;
 			continue;
 		}
-
 		else if (s[i - 1] == 32 || s[i - 1] == 33 || s[i - 1] == 9 ||
 			 s[i - 1] == 10 || s[i - 1] == 46)
 		{
@@ -24,25 +22,25 @@ char *cap_string(char *s)
 				s[i] = s[i] - 32;
 			continue;
 		}
-			else if (s[i - 1] == 44 || s[i - 1] == 59 ||
-				 s[i - 1] == 63 || s[i - 1] == 34)
+		else if (s[i - 1] == 44 || s[i - 1] == 59 ||
+			 s[i - 1] == 63 || s[i - 1] == 34)
 		{
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - 32;
 			continue;
 		}
-			else if (s[i - 1] == 40 || s[i - 1] == 41 ||
-				 s[i - 1] == 123 || s[i - 1] == 125)
-			{
-				if (s[i] >= 'a' && s[i] <= 'z')
-					s[i] = s[i] - 32;
-				continue;
-			}
-			else
-			{
-				if (s[i] >= 'A' && s[i] <= 'Z')
-					s[i] = s[i] + 32;
-			}
+		else if (s[i - 1] == 40 || s[i - 1] == 41 ||
+			 s[i - 1] == 123 || s[i - 1] == 125)
+		{
+			if (s[i] >= 'a' && s[i] <= 'z')
+				s[i] = s[i] - 32;
+			continue;
+		}
+		else
+		{
+			if (s[i] >= 'A' && s[i] <= 'Z')
+				s[i] = s[i] + 32;
+		}
 	}
 	return (s);
 }
