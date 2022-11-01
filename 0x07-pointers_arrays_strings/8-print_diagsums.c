@@ -10,15 +10,11 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int j;
-	int ar;
-	int sum;
+	int sum = 0;
+	a = (int)a;
 
-	for (i = 0; i < size; ++i)
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < size; ++j)
-		{
-			sum = sum + a[i][j];
-			ar = ar + a[i][size - j - 1];
+		sum = sum + (a[i] + i);
 	}
 }
