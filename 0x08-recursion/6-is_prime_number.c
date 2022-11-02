@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *is_prime_number - Function that returns the power of a number
+ *is_prime_number - Function that calculates prime numbers
  *@n: parameter passed
  *Return: 1 or -1 or value x raised to the power y
  */
-int is_prime_number(int n )
+int is_prime_number(int n)
 {
 
 	if (n == 2)
@@ -13,5 +13,5 @@ int is_prime_number(int n )
 	else if (n % 2 == 0)
 		return (0);
 	else
-		return (is_prime_number (3 - 1));
+		return (is_prime_number(3 - 1));
 }
