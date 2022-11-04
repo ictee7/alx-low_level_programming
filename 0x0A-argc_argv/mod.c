@@ -17,13 +17,8 @@ int main(int argc, char **argv)
 	{
 		if (atoi(argv[i]) == 0)
 		{
-			if (*argv[i] != '0')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-				sum = sum + atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
 		else
 		{
