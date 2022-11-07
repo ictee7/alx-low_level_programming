@@ -15,6 +15,7 @@ char *_strdup(char *str)
 
 	if (str == 0 || p_str == NULL)
 	{
+		free(p_str);
 		return (0);
 	}
 	else
