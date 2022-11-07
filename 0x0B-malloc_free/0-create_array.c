@@ -16,17 +16,17 @@ char *create_array(unsigned int size, char c)
 
 	str = malloc(sizeof(char) * size);
 
-	if (str == 0)
+	for (i = 0; i < size; i++)
 	{
-		printf("failed to allocate memory");
-		return (0);
-	}
-
-	else
-		for (i = 0; i < size; i++)
+		if (str == 0)
 		{
-			str[i] = c;
+			printf("failed to allocate memory");
+			return (0);
 		}
+
+		else
+			str[i] = c;
+	}
 	return (str);
 	free(str);
 }
