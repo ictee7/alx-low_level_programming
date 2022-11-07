@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 #include <string.h>
 
@@ -13,7 +12,7 @@ char *_strdup(char *str)
 {
 	char *p_str = malloc(strlen(str) + 1);
 
-	if (str == 0 || p_str == NULL)
+	if (str == NULL || p_str == NULL)
 	{
 		free(p_str);
 		return (0);
