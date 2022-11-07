@@ -1,0 +1,36 @@
+#include <stdlib.h>
+#include "main.h"
+#include <string.h>
+
+/**
+ *alloc_grid - Function that returns pointer to a 2D array
+ *@width: 1st parameter passed
+ *@height: 2nd parameter passed
+ *Return: pointer to 2D array or null
+ */
+
+int **alloc_grid(int width, int height)
+{
+	int *array[height];
+	int i;
+	int j;
+	w = malloc(sizeof(int) * width);
+	h = malloc(sizeof(int) * height);
+
+	if (width == 0 || height == 0)
+	{
+		free(array);
+		return (0);
+	}
+	else
+	{
+		for (i = 0; i < h; i++)
+		{
+			for (j = 0; j < w; j++)
+
+			printf("0");
+		}
+
+	}
+	return (h);
+}

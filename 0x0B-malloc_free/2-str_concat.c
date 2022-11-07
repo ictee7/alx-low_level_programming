@@ -12,19 +12,19 @@
 char *str_concat(char *s1, char *s2)
 {
 	int i;
-	int dest_len = strlen(s1);
-	int src_len = strlen(s2);
+	char * dest_len = malloc(strlen(s1));
+	char * src_len = malloc(strlen(s2));
 
-	if (dest_len)
+	if (s2 == NULL)
 	{
 		free(s1);
 		return (0);
 	}
 	else
 	{
-		for (i = 0; i < src_len && s2[i] != '\0'; i++)
-			s1[dest_len + i] = s2[i];
-		s1[dest_len + i] = s2[i];
+		for (i = 0; i < *src_len && s2[i] != '\0'; i++)
+			s1[*dest_len + i] = s2[i];
+		s1[*dest_len + i] = s2[i];
 	}
 	return (s1);
 	free(s1);
