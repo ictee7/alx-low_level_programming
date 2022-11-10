@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	str = malloc(nmemb * size);
 
-	if (i == 0)
+	if (str == 0)
 	{
 		return (0);
 	}
