@@ -10,12 +10,13 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *type;
-	type = malloc(sizeof(*type) * b);
+	void *type;
+
+	type = malloc(b);
 
 	if (type == NULL)
-		return(98);
+		exit(98);
 
 	else
-		return(type);
+		return (type);
 }
