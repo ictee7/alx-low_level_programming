@@ -5,15 +5,15 @@
   *@age: 1st member
   *@name: 2nd member
   *@owner: 3rd member
+  *
+  *Description: Struct for dog
   */
 
 struct dog
-/* structure*/
 {
 	float age;
 	char *name;
 	char *owner;
-	/* structure containing members*/
 };
 
 #endif
