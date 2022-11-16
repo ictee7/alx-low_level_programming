@@ -14,6 +14,7 @@ int main(int ac, char **av)
 	int first;
 	int last;
 	int res;
+	int (*p)(int, int);
 
 	if (ac != 4)
 	{
@@ -37,7 +38,8 @@ int main(int ac, char **av)
 	{
 		first = atoi(av[1]);
 		last = atoi(av[3]);
-		res = get_op_func(av[2])(first, last);
+		p = get_op_func(av[2]);
+		res = p(first, last);
 
 		printf("%d\n", res);
 	}
