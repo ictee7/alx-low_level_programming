@@ -1,0 +1,34 @@
+#include "3-calc.h"
+#include <stdio.h>
+
+/**
+  *main - Entry point
+  *@ac: argument count
+  *@av: argument vector
+  *Return: 0
+  */
+
+int main(int ac, char **av)
+{
+	int first;
+	int last;
+	int op;
+	if (ac != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	else if (av[2] != '+' || av[2] != '-' || av[2] != '*' || av[2] != '/' || av[2] != '%')
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	else if ((av[2] == '/'  && av[3] == 0) || (av[2] == '/'  && av[3] == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	else
+
