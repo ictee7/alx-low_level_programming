@@ -22,26 +22,18 @@ int main(int ac, char **av)
 		exit(98);
 	}
 
-	else if (*av[2] != '+' || *av[2] != '-' || *av[2] != '*'
-		 || *av[2] != '/' || *av[2] != '%')
+	first = atoi(av[1]);
+	last = atoi(av[3]);
+
+	p = get_op_func(av[2]);
+
+	if (p == NULL)
 	{
 		printf("Error\n");
-		exit(98);
-	}
-	else if ((*av[2] == '/'  && *av[3] == 0) || (*av[2] == '/'  && *av[3] == 0))
-	{
-		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 
-	else
-	{
-		first = atoi(av[1]);
-		last = atoi(av[3]);
-		p = get_op_func(av[2]);
-		res = p(first, last);
-
-		printf("%d\n", res);
-	}
+	res = p(first, last);
+	printf("%d\n", res);
 	return (0);
 }
