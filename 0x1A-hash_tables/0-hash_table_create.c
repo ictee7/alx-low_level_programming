@@ -1,18 +1,18 @@
+/*
+ * File: 0-hash_table_create.c
+ */
+
 #include "hash_tables.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 /**
- * hash_table_create - ht create with 1024 spaces
+ * hash_table_create - Creates a hash table.
+ * @size: The size of the array.
  *
- * @size: size with arrays to create
- *
- * Return: hash table t
+ * Return: If an error occurs - NULL.
+ *         Otherwise - a pointer to the new hash table.
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-
 	hash_table_t *ht;
 	unsigned long int i;
 
