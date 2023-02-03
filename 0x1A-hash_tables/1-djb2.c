@@ -1,8 +1,6 @@
-*
- * File: 1-djb2.c
- */
-
 #include "hash_tables.h"
+#include <stddef.h>
+
 
 /**
  * hash_djb2 - Hash function implementing the djb2 algorithm.
